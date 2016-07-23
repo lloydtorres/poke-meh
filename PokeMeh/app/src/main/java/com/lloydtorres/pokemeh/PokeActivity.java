@@ -1,5 +1,6 @@
 package com.lloydtorres.pokemeh;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -64,7 +65,7 @@ public class PokeActivity extends AppCompatActivity {
         public void run() {
             while (isRunning) {
                 if (isGettingBaseline) {
-                    if (accelSamples > 512) {
+                    if (accelSamples > 128) {
                         isGettingBaseline = false;
                         runOnUiThread(new Runnable() {
                             @Override
@@ -205,7 +206,14 @@ public class PokeActivity extends AppCompatActivity {
                 try {
                     pThread.setRunning(false);
                     pThread.join();
+                    bgm.stop();
                     isLostRecorded = true;
+                    Log.v("PokeMeh", "Here!");
+                    Intent results = new Intent(PokeActivity.this, ResultsActivity.class);
+                    results.putExtra(ResultsActivity.SLOWPOKE_KEY, slowpokes);
+                    startActivity(results);
+                    Log.v("PokeMeh", "Launched!");
+                    finish();
                 }
                 catch (Exception e) {
 

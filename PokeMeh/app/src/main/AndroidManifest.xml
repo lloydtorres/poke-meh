@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".PokeActivity"
             android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".ResultsActivity"
+            android:screenOrientation="sensorPortrait"/>
     </application>
 
 </manifest>

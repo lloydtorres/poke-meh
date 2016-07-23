@@ -27,6 +27,8 @@
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:src="@drawable/slowpoke"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
         <TextView

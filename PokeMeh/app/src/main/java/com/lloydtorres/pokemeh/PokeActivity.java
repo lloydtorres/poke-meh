@@ -105,7 +105,7 @@ public class PokeActivity extends AppCompatActivity {
                                         slowpoke.getLayoutParams().height += slowpoke.getLayoutParams().height * 1.025;
                                         slowpoke.getLayoutParams().width += slowpoke.getLayoutParams().width * 1.025;
 
-                                        RotateAnimation anim = new RotateAnimation(0f, -360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                                        RotateAnimation anim = new RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
                                         anim.setInterpolator(new LinearInterpolator());
                                         anim.setRepeatCount(Animation.INFINITE);
                                         anim.setDuration(1000);

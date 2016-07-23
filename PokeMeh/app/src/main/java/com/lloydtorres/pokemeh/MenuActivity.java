@@ -3,11 +3,12 @@ package com.lloydtorres.pokemeh;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class PokeActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_poke);
+        setContentView(R.layout.activity_menu);
+        getSupportActionBar().hide();
     }
 }

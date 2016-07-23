@@ -12,6 +12,7 @@ import mehdi.sakout.fancybuttons.FancyButton;
 
 public class MenuActivity extends AppCompatActivity {
 
+    FancyButton btnPlay;
     FancyButton btnMyoScanner;
 
     @Override
@@ -22,6 +23,16 @@ public class MenuActivity extends AppCompatActivity {
 
         Hub hub = Hub.getInstance();
         hub.init(this, getPackageName());
+
+        btnPlay = (FancyButton) findViewById(R.id.btn_play);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this, PokeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         btnMyoScanner = (FancyButton) findViewById(R.id.btn_myosync);
         btnMyoScanner.setOnClickListener(new View.OnClickListener() {

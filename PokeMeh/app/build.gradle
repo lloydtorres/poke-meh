@@ -23,6 +23,9 @@ repositories {
     maven {
         url 'src/myorepository'
     }
+    jcenter{
+        url "http://jcenter.bintray.com/"
+    }
 }
 
 dependencies {
@@ -30,5 +33,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.github.medyo:fancybuttons:1.8.1'
+    compile 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+    compile 'com.plattysoft.leonids:LeonidsLib:1.3.1'
     compile 'com.thalmic:myosdk:0.10.+@aar'
 }

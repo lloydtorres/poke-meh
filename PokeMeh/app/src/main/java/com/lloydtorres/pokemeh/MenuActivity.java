@@ -23,6 +23,7 @@ public class MenuActivity extends AppCompatActivity {
 
         Hub hub = Hub.getInstance();
         hub.init(this, getPackageName());
+        hub.setSendUsageData(false);
 
         btnPlay = (FancyButton) findViewById(R.id.btn_play);
         btnPlay.setOnClickListener(new View.OnClickListener() {

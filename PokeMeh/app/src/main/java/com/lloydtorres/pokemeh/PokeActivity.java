@@ -83,7 +83,7 @@ public class PokeActivity extends AppCompatActivity {
                         lastUpdate = curTime;
                         milliseconds++;
 
-                        if (milliseconds > 15000L) {
+                        if (milliseconds > 10000L) {
                             milliseconds = 0L;
                             slowpokes++;
                             animateSlowpoke = true;
@@ -92,8 +92,8 @@ public class PokeActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                countdown.setText(Long.toString(milliseconds/1000L));
-                                progress.setProgress((int) (100*((double) milliseconds/15000L)));
+                                countdown.setText(Long.toString(10L-milliseconds/1000L));
+                                progress.setProgress((int) (100-100*((double) milliseconds/10000L)));
                                 message.setText(String.format("Slowpoke × %d", slowpokes));
 
                                 if (animateSlowpoke) {
@@ -137,9 +137,9 @@ public class PokeActivity extends AppCompatActivity {
                 orientSamples++;
             }
             else {
-                if (Math.abs(yaw - yawRefMag) > 0.1 ||
-                        Math.abs(roll - rollRefMag) > 0.1 ||
-                        Math.abs(pitch - pitchRefMag) > 0.1) {
+                if (Math.abs(yaw - yawRefMag) > 0.5 ||
+                        Math.abs(roll - rollRefMag) > 0.5 ||
+                        Math.abs(pitch - pitchRefMag) > 0.5) {
                     lose();
                 }
             }
@@ -152,7 +152,7 @@ public class PokeActivity extends AppCompatActivity {
                 accelRefMag = ((accelRefMag * accelSamples) + calcMag) / ++accelSamples;
             }
             else {
-                if (Math.abs(accelRefMag - calcMag) > 0.7) {
+                if (Math.abs(accelRefMag - calcMag) > 1) {
                     lose();
                 }
             }

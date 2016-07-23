@@ -30,7 +30,6 @@ public class ResultsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        getSupportActionBar().hide();
 
         long slowpokes = getIntent().getLongExtra(SLOWPOKE_KEY, 0);
 

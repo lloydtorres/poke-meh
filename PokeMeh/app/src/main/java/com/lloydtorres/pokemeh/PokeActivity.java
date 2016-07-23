@@ -176,7 +176,6 @@ public class PokeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poke);
-        getSupportActionBar().hide();
 
         texmexer = new ParticleSystem(this, 50, R.drawable.texmex, 1000L);
 

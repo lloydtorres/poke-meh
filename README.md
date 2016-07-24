@@ -1,2 +1,4 @@
 # Poké Meh
-Why catch Vaporeons when you can just be a Slowpoke? Built for Waterloo TerribleHack IV (Summer 2016).
+> Why catch ***VAPE***oreons when you can just be a Slowpoke?
+
+Built for Waterloo TerribleHacks IV (Summer 2016). Won 'Best Game (sponsored by Zynga)' and 'Most Pokémon' awards.
